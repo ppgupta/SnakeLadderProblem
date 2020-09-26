@@ -1,7 +1,9 @@
 package javapractice;
-public class SnakeLadderUC1{
+public class SnakeLadderUC2{
     public static void main(String[] args) {
 	int INITIAL_POSITION=0;
-	System.out.println(INITIAL_POSITION);
+	int Dice=((int)Math.floor(Math.random()*60)%6)+1;
+
+	System.out.println(Dice);
 }
 }
