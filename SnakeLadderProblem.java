@@ -1,6 +1,6 @@
 package javapractice;
 
- public class SnakeLadderUC4 {
+ public class SnakeLadderUC5 {
 public static void main(String[] args) {
 	int INITIAL_POSITION=0;
 	
