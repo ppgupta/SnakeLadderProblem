@@ -1,16 +1,19 @@
 package javapractice;
-public class SnakeLadderUC3{
-    public static void main(String[] args) {
+
+ public class SnakeLadderUC4 {
+public static void main(String[] args) {
 	int INITIAL_POSITION=0;
-	int Dice=((int)Math.floor(Math.random()*60)%6)+1;
-	int Pie=((int)Math.floor(Math.random()*30)%3)+1;
-    System.out.println("Number on Dice "+ Dice);
-    System.out.println("Options "+ Pie);
-    int No_Play=1;int Snake=2;int Ladder=3;
-    int Final_Position;
-    if(Pie==No_Play) {
+	
+int No_Play=1;int Snake=2;int Ladder=3;
+  int Final_Position=0;
+  while(Final_Position!=100 ) {
+		int Dice=((int)Math.floor(Math.random()*60)%6)+1;
+		int Pie=((int)Math.floor(Math.random()*30)%3)+1;
+
+  if(Pie==No_Play) {
 	  Final_Position=INITIAL_POSITION;
-	  }
+	  INITIAL_POSITION=Final_Position;
+  }
   else if(Pie==Snake){
 	  Final_Position=INITIAL_POSITION+Dice;
   }
@@ -21,8 +24,13 @@ public class SnakeLadderUC3{
 		  }		  
 	  }
   }
-  
-            System.out.println(Final_Position);
+  if(Final_Position>100) {
+	  Final_Position=INITIAL_POSITION;
+  }
 
-    }
+  INITIAL_POSITION=Final_Position;
+
+  }
+
+}
 }
